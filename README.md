@@ -97,25 +97,6 @@ Walk away with a deployable agent and the confidence to build more.
 
 ---
 
-## How the Self-Serve Generator Works
-
-```
-┌─────────────┐     ┌──────────────┐     ┌────────────┐     ┌──────────────────┐
-│  Industry   │ ──> │   Function   │ ──> │    Tier    │ ──> │  Build-Along     │
-│  Selection  │     │   Selection  │     │  Selection │     │  Package         │
-└─────────────┘     └──────────────┘     └────────────┘     └──────────────────┘
-                                                                     │
-                                                                     ▼
-                                                            ┌──────────────────┐
-                                                            │  • Scenario      │
-                                                            │  • Step-by-step  │
-                                                            │  • Sample data   │
-                                                            │  • Prompts       │
-                                                            │  • Facilitator   │
-                                                            │    narrative     │
-                                                            └──────────────────┘
-```
-
 **Pick an industry** (Financial Services, Healthcare, Retail, Manufacturing, Public Sector, Energy, Professional Services)
 → **Pick a function** (Sales, Marketing, Finance, HR, Operations, IT, Customer Service)
 → **Pick a tier** (1, 2, or 3)
@@ -191,8 +172,3 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 Microsoft UK&I Partner Solution Architects · Agent Build-Along Series
 
----
-
-## License
-
-[Add license]
