@@ -112,21 +112,6 @@ Walk away with a deployable agent and the confidence to build more.
 - [Add prerequisite — e.g., Node.js 20+ / Python 3.11+]
 - [Add prerequisite — e.g., access to template repository]
 
-### Quick Start
-
-```bash
-# Clone the repo
-git clone https://github.com/[your-org]/agent-build-along.git
-cd agent-build-along
-
-# Install dependencies
-[add install command]
-
-# Generate your first Build-Along
-[add run command]
-```
-
----
 
 ## Next Steps — Join or Host a Build-Along
 
@@ -150,18 +135,6 @@ agent-build-along/
 ├── assets/                         # Sample data, prompts, narratives
 └── examples/                       # Sample generated sessions
 ```
-
----
-
-## Contributing
-
-We welcome contributions across all three tiers:
-- New industry × function scenarios
-- Improvements to existing Build-Along templates
-- Localization for EMEA languages
-- Bug reports and feature requests
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ---
 
