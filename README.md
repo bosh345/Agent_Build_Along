@@ -3,7 +3,7 @@
 > **Choose your tier. Build it. Ship it.**
 > A self-serve service for producing engaging, industry- and function-specific Agent Build-Along sessions across the Microsoft platform stack.
 
-**Microsoft 365 Copilot · Copilot Studio · Azure AI Foundry · Cowork**
+**Microsoft 365 Copilot · Copilot Studio · Microsoft Foundry · Cowork**
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![Schedule](https://img.shields.io/badge/2026-rolling%20schedule-blue.svg)]()
@@ -30,7 +30,7 @@ Walk away with a deployable agent and the confidence to build more.
 |------|----------|----------|----------|----------|
 | **1 — Foundation** | Microsoft 365 Copilot Agent Builder | Business makers, end users, departmental teams | 60 min | No-code |
 | **2 — Extend** | Copilot Studio | Citizen developers, power users, ops teams | 90 min | Low-code |
-| **3 — Pro-Code** | Azure AI Foundry | Pro developers, architects, AI engineers | 180+ min | Code-first |
+| **3 — Pro-Code** | Microsoft Foundry | Pro developers, architects, AI engineers | 180+ min | Code-first |
 | **Bonus** | Cowork |  Business makers, end users, departmental teams  | 75 min | No-Code |
 
 ---
@@ -77,7 +77,7 @@ Walk away with a deployable agent and the confidence to build more.
 
 ---
 <img src="images/tier3.png" width="600">
-## Tier 3 — Azure AI Foundry
+## Tier 3 — Microsoft Foundry
 
 **Ship a code-first agent with evaluations and observability.**
 
@@ -90,7 +90,7 @@ Walk away with a deployable agent and the confidence to build more.
 **Session flow:** Provision → Build → Evaluate → Deploy
 
 **Prerequisites**
-- Azure subscription with Azure AI Foundry access
+- Azure subscription with Microsoft Foundry access
 - VS Code, plus Python or .NET familiarity
 - Sample data or a use case ready to ground on
 
@@ -128,7 +128,7 @@ agent-build-along/
 ├── tiers/
 │   ├── tier-1-agent-builder/      # M365 Copilot Agent Builder templates
 │   ├── tier-2-copilot-studio/     # Copilot Studio templates
-│   └── tier-3-foundry/            # Azure AI Foundry templates
+│   └── tier-3-foundry/            # Microsoft Foundry templates
 ├── industries/                     # Industry scenario libraries
 ├── functions/                      # Function-specific overlays
 ├── generator/                      # Self-serve generation engine
@@ -145,4 +145,3 @@ agent-build-along/
 [brianoshea@microsoft.com](mailto:brianoshea@microsoft.com)
 
 Microsoft UK&I Partner Solution Architects · Agent Build-Along Series
-
