@@ -1,7 +1,7 @@
 # Agent Build-Along Series
 
 > **Choose your tier. Build it. Ship it.**
-> A self-serve service for producing engaging, industry- and function-specific Agent Build-Along sessions across the Microsoft platform stack.
+> Everything you need to deliver a hands-on Copilot Agent workshop — from zero to a working agent in under 60 minutes
 
 **Microsoft 365 Copilot · Copilot Studio · Microsoft Foundry · Cowork**
 
