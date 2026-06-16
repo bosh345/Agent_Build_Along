@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Cowork Estimator | Partner Download</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--cp-bg);
+      color: var(--cp-text);
+      font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    a {
+      color: var(--cp-link);
+    }
+
+    .shell {
+      min-height: 100vh;
+      padding: 32px;
+      display: grid;
+      place-items: center;
+    }
+
+    .app {
+      width: min(1120px, 100%);
+      display: grid;
+      gap: 24px;
+    }
+
+    .hero,
+    .card {
+      background: var(--cp-surface);
+      border: 1px solid var(--cp-border);
+      border-radius: 16px;
+      box-shadow: 0 0 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14);
+    }
+
+    .hero {
+      padding: 36px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 6px 10px;
+      border-radius: 0.625rem;
+      background: var(--cp-accent-soft);
+      color: var(--cp-accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 0.625rem;
+      background: var(--cp-accent);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+    }
+
+    .lead {
+      max-width: 700px;
+      margin: 20px 0 0;
+      color: var(--cp-text-muted);
+      font-size: 1.16rem;
+      line-height: 1.55;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 0.625rem;
+      border: 1px solid var(--cp-border);
+      padding: 10px 16px;
+      color: var(--cp-text);
+      background: var(--cp-surface);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      border-color: var(--cp-accent);
+      background: var(--cp-accent);
+      color: var(--cp-accent-fg);
+    }
+
+    .button.primary:hover {
+      background: var(--cp-accent-hover);
+      border-color: var(--cp-accent-hover);
+    }
+
+    .button:focus-visible {
+      outline: 3px solid var(--cp-highlight);
+      outline-offset: 2px;
+    }
+
+    .download-card {
+      padding: 24px;
+      background: var(--cp-bg-elevated);
+      border: 1px solid var(--cp-border);
+      border-radius: 16px;
+    }
+
+    .file-icon {
+      width: 72px;
+      height: 72px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      border-radius: 16px;
+      background: var(--cp-accent-soft);
+      color: var(--cp-accent);
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    .download-card h2,
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1.3rem;
+    }
+
+    .download-card p,
+    .card p,
+    li {
+      color: var(--cp-text-muted);
+      line-height: 1.55;
+    }
+
+    .meta {
+      display: grid;
+      gap: 8px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--cp-border);
+      color: var(--cp-text-soft);
+      font-family: Consolas, "Courier New", Courier, monospace;
+      font-size: 0.85rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 24px;
+    }
+
+    .number {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+      border-radius: 0.625rem;
+      background: var(--cp-accent-soft);
+      color: var(--cp-accent);
+      font-weight: 800;
+    }
+
+    .note {
+      padding: 18px 20px;
+      border: 1px solid var(--cp-border);
+      border-radius: 16px;
+      background: var(--cp-panel);
+      color: var(--cp-text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      color: var(--cp-text-soft);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 840px) {
+      .shell {
+        padding: 16px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="app">
+      <section class="hero">
+        <div>
+          <div class="eyebrow"><span class="dot"></span>Partner resource</div>
+          <h1>Customer Cowork Estimator</h1>
+          <p class="lead">A simple partner landing page for downloading the Microsoft Customer Cowork Estimator workbook and sharing it with customers during cowork discovery, planning, and value conversations.</p>
+          <div class="actions">
+            <a class="button primary" href="./CustomerCoworkEstimator.xlsx" download>Download workbook</a>
+            <a class="button" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fadoption.microsoft.com%2Ffiles%2Fcowork%2FCustomerCoworkEstimator.xlsx&wdOrigin=BROWSELINK" target="_blank" rel="noopener noreferrer">Preview in browser</a>
+          </div>
+        </div>
+
+        <aside class="download-card" aria-label="Workbook details">
+          <div class="file-icon">X</div>
+          <h2>Ready for partners</h2>
+          <p>Use the workbook as a guided estimator, then download a fresh copy when you need to run a new customer scenario.</p>
+          <div class="meta">
+            <span>File: CustomerCoworkEstimator.xlsx</span>
+            <span>Format: Microsoft Excel workbook</span>
+            <span>Source: adoption.microsoft.com</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="grid" aria-label="How to use the estimator">
+        <article class="card">
+          <div class="number">1</div>
+          <h2>Download</h2>
+          <p>Save the workbook locally before each customer conversation so your inputs and assumptions stay specific to that engagement.</p>
+        </article>
+        <article class="card">
+          <div class="number">2</div>
+          <h2>Estimate</h2>
+          <p>Capture customer cowork assumptions, compare scenarios, and use the model to frame effort, value, and next-step planning.</p>
+        </article>
+        <article class="card">
+          <div class="number">3</div>
+          <h2>Share</h2>
+          <p>Use the outputs to support partner/customer discussions, then attach the workbook or link this page for repeatable access.</p>
+        </article>
+      </section>
+
+      <div class="note">
+        This page packages a publicly available Microsoft Adoption workbook for convenient partner access. Confirm the workbook version and any customer-specific assumptions before sharing externally.
+      </div>
+
+      <footer>
+        Published with GitHub Pages for partner download access.
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
